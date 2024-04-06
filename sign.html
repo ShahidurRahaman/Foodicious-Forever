@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodicious Forever</title>
+</head>
+
+<link rel="stylesheet" href="./css/sign.css">
+<script src="./js/script.js"></script>
+
+<!-- BOOTSTRAP -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+<body>
+
+    <!-- MAIN -->
+    <div class="container-fluid">
+        <div class="form-wrapper">
+            <div id="sign-in">
+                <h4>Sign-In</h4>
+                <input id="phone" class="inpt" type="tel" placeholder="Phone">
+                <br>
+                <input class="submit" type="submit" name="submit" value="Get OTP">
+                <p>Don't have an account yet? <a href="#" onclick="signup()">Create account</a> </p>
+            </div>
+            <div id="sign-up">
+                <h4>Sign-Up</h4>
+                <input type="text" class="inpt" placeholder="Name" class="inpt">
+                <br>
+                <input id="phone2" class="inpt" type="tel" placeholder="Phone">
+                <br>
+                <input class="submit" type="submit" name="submit" value="Get OTP">
+                <p>Already have an account? <a href="#" onclick="signin()">Sign-in</a> </p>
+            </div>
+            <a href="./index.html">Go Back</a>
+        </div>
+    </div>
+</body>
+<script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        initialCountry: "in",
+        strictMode: true,
+        utilsScript: "/intl-tel-input/js/utils.js?1712148471535" // just for formatting/placeholders etc
+    });
+    const input2 = document.querySelector("#phone2");
+    window.intlTelInput(input2, {
+        initialCountry: "in",
+        strictMode: true,
+        utilsScript: "/intl-tel-input/js/utils.js?1712148471535" // just for formatting/placeholders etc
+    });
+</script>
+
+</html>
